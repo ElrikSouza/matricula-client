@@ -29,7 +29,7 @@ export default Vue.extend({
     };
   },
   methods: {
-    onUpdateHandler(value) {
+    onUpdateHandler(value: any) {
       this.value = value;
       this.$emit("input", this.value);
     },
