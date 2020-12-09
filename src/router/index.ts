@@ -20,6 +20,16 @@ const routes = [
     name: "Register",
     component: () => import("../views/register.vue"),
   },
+  {
+    path: "/enroll",
+    name: "Matricula",
+    component: () => import("../views/enroll.vue"),
+  },
+  {
+    path: "/enroll-edit",
+    name: "Editar Matricula",
+    component: () => import("../views/enroll-edit.vue"),
+  },
 ];
 
 const router = new VueRouter({
