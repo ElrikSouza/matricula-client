@@ -4,6 +4,9 @@
     :class="{
       'btn--primary': color == 'primary',
       'btn--secondary': color == 'secondary',
+      'btn--danger': color == 'danger',
+      'btn--md': size == 'md',
+      'btn--sm': size == 'sm',
     }"
     v-bind="$attrs"
     @click="$emit('click')"
@@ -20,15 +23,16 @@ export default Vue.extend({
       type: String,
       default: "primary",
     },
+    size: {
+      type: String,
+      default: "md",
+    },
   },
 });
 </script>
 
 <style scoped>
 .btn {
-  padding: 1rem;
-  min-width: 10rem;
-  font-size: 1rem;
   font-weight: 600;
   outline: none;
   border: none;
@@ -52,5 +56,26 @@ export default Vue.extend({
 .btn--secondary:hover,
 .btn--secondary:active {
   background-color: var(--secondary-color-dark);
+}
+
+.btn--danger {
+  background-color: var(--danger-color);
+  color: white;
+}
+
+.btn--danger:hover,
+.btn--danger:active {
+  background-color: var(--danger-color-dark);
+}
+
+.btn--md {
+  padding: 1rem;
+  min-width: 10rem;
+  font-size: 1rem;
+}
+
+.btn--sm {
+  padding: 0.85rem;
+  font-size: 0.85rem;
 }
 </style>
